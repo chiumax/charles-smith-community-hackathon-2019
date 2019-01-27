@@ -16,7 +16,8 @@ class App extends Component {
           <div className={"landText"}>
             <div className={"homeTitle"}>Cram Travel</div>
             <div className={"landDesc"}>For Independent Teens</div>
-            <Link to="/book" className={"homeLink hvr-outline-out"}>Order Now</Link>
+            <Link to={{pathname:"/book" , 
+    state: { stage: 1 }}}  className={"homeLink hvr-outline-out"}>Order Now</Link>
           </div>
           <img src={travel} className={"landImage"} />
         </div>
@@ -52,7 +53,7 @@ class App extends Component {
             <div>
               <div className={"homeHeader"}>Sights</div>
               <div className={"homeContent"}>
-                - No trip is complete without amazing places to visit and
+                No trip is complete without amazing places to visit and
                 activities to experience. Choose a destination and we’ll find
                 the best location.
               </div>
