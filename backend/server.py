@@ -1,5 +1,4 @@
 from flask import Flask, request
-import react
 import latlong_utils
 import public_transit
 import back
