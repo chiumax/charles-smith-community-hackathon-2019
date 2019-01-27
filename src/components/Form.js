@@ -52,7 +52,7 @@ class App extends Component {
      })
   }
   renderForm = () => {
-    return !!this.state.redirect ? <Redirect to='depart' />:<div className={"formPage"}>
+    return !!this.state.redirect ? <Redirect to='/depart' />:<div className={"formPage"}>
         <div className={"formCard"}>
         <ReactSVG src={transportation} className={"formIcon"}/>
           <form onSubmit={this.handleSubmit} className={"formWrap"}>
