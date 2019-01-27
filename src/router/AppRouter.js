@@ -3,7 +3,8 @@ import { Router, Route, Switch, Link, NavLink } from "react-router-dom";
 import createHistory from "history/createBrowserHistory";
 
 // import NotFoundPage from "../components/NotFoundPage";
-import Home from "../components/Home"
+import Home from "../components/Home";
+import Book from "../components/Book";
 // import MapPage from "../components/MapPage"
 
 const history = createHistory();
@@ -13,7 +14,7 @@ const AppRouter = () => (
     <div>
       <Switch>
         <Route path="/" component={Home} exact={true} />
-        
+        <Route path="/book" component={Book} exact={true} />
       </Switch>
     </div>
   </Router>
