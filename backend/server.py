@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 import latlong_utils
 import public_transit
-import back
+from back import airport
 app = Flask(__name__)
 CORS(app)
 trips = dict()
@@ -17,13 +17,13 @@ def list_airports():
     ret = {"dep":[],"arr":[]}
     d = request.args["lAd"] + ", "+request.args["lCi"]+request.args["lSt"]+request.args["lCo"]
     d_loc = latlong_utils.geocode(d)
-    air = back.airport(d_loc["lat"], d_loc["lng"])
+    air = airport(d_loc["lat"], d_loc["lng"])
     l = air.getAirports()
     for i in l:
         ret["dep"].append({i[0]:i[1]})
     a = request.args["dAd"]+","+request.args["dCi"]+request.args["dSt"]+request.args["dCo"]
     a_loc = latlong_utils.geocode(a)
-    air2 = back.airport(a_loc["lat"], a_loc["lng"])
+    air2 = airport(a_loc["lat"], a_loc["lng"])
     l = air2.getAirports()
     for i in l:
         ret["arr"].append({i[0]:i[1]})
