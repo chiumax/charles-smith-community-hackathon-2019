@@ -27,7 +27,7 @@ def list_airports():
     l = air2.getAirports()
     for i in l:
         ret["arr"].append({i[0]:i[1]})
-    return ret
+    return str(ret)
 @app.route("/find_flights")
 def find_flights():
     ret={}
