@@ -7,7 +7,7 @@ class App extends Component {
 
   render() {
     return (
-      <Plane  />
+      <Plane data={this.props.location.state}  />
     );
   }
 }

@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import ReactSVG from "react-svg";
-import { Router, Route, Switch, Link, NavLink, Redirect } from "react-router-dom";
+import {
+  Router,
+  Route,
+  Switch,
+  Link,
+  NavLink,
+  Redirect
+} from "react-router-dom";
 
 import travel from "../images/travel.jpg";
 
@@ -12,13 +19,15 @@ import arrowRight from "../images/arrow-right.svg";
 class App extends Component {
   state = {
     locationCountry: "",
-    locationAddress:"",
+    locationAddress: "",
     locationCity: "",
-    locationState:"",
+    locationState: "",
     destinationCountry: "",
-    destinationAddress:"",
-    destinationCity:"",
-    destinationState:"",
+    destinationAddress: "",
+    destinationCity: "",
+    destinationState: "",
+    arrival:null,
+    departure:null,
     redirect: false
   };
   locationOnChangeCountry = event => {
@@ -47,16 +56,23 @@ class App extends Component {
   };
 
   handleSubmit = event => {
-    console.log(event.target);
-     this.setState({redirect: true
-     })
-  }
+    event.preventDefault();
+    console.log("Fetch");
+    fetch(
+      `http://localhost:5000/flights?lCo=${this.state.locationCountry}&lAd=${this.state.locationAddress}&lCi=${this.state.locationCity}&lSt=${this.state.locationState}&dCo=${this.state.destinationCountry}&dCi=${this.state.destinationCity}&dSt=${this.state.destinationState}&dAd=${this.state.destinationAddress}`
+    ).then(data=>data.json()).then((data)=>{console.log(data); this.setState({ redirect: true,departure:data.d,arrival:data.a });});
+    // this.setState({ redirect: true});
+    // TODO this.state
+  };
   renderForm = () => {
-    return !!this.state.redirect ? <Redirect to='/depart' />:<div className={"formPage"}>
+    return !!this.state.redirect ? (
+      <Redirect to={{pathname:"/depart",state: {data: this.state}}} />
+    ) : (
+      <div className={"formPage"}>
         <div className={"formCard"}>
-        <ReactSVG src={transportation} className={"formIcon"}/>
+          <ReactSVG src={transportation} className={"formIcon"} />
           <form onSubmit={this.handleSubmit} className={"formWrap"}>
-          <div className={"formTitle"}>Step One: Flight</div>
+            <div className={"formTitle"}>Step One: Flight</div>
             <div className={"formInput"}>
               <div>
                 <div>Location: </div>
@@ -89,9 +105,9 @@ class App extends Component {
                   onChange={event => this.locationOnChangeState(event)}
                 />
               </div>
-              <ReactSVG src={arrowRight} className={"formSVG"}/>
+              <ReactSVG src={arrowRight} className={"formSVG"} />
               <div>
-                <div >Destination: </div>
+                <div>Destination: </div>
                 <input
                   type="text"
                   name="destinationCountry"
@@ -99,7 +115,7 @@ class App extends Component {
                   placeholder="Country"
                   onChange={event => this.destinationOnChangeCountry(event)}
                 />
-                
+
                 <input
                   type="text"
                   name="destinationCity"
@@ -114,21 +130,29 @@ class App extends Component {
                   placeholder="State"
                   onChange={event => this.destinationOnChangeState(event)}
                 />
+                <input
+                  type="text"
+                  name="destinationAddress"
+                  value={this.state.destinationAddress}
+                  placeholder="State"
+                  onChange={event => this.destinationOnChangeAddress(event)}
+                />
               </div>
-
             </div>
             <div className={"hvr-outline-out-form"}>
-            <input type="submit" value="Submit"  className={"formSubmit hvr-outline-out-form"}/>
-          </div>
+              <input
+                type="submit"
+                value="Submit"
+                className={"formSubmit hvr-outline-out-form"}
+              />
+            </div>
           </form>
         </div>
       </div>
-  }
-  render() {
-    return (
-      <div>{this.renderForm()}</div>
-      
     );
+  };
+  render() {
+    return <div>{this.renderForm()}</div>;
   }
 }
 
