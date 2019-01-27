@@ -1,8 +1,10 @@
 from flask import Flask, request
+from flask_cors import CORS
 import latlong_utils
 import public_transit
 import back
 app = Flask(__name__)
+CORS(app)
 trips = dict()
 @app.route("/", methods=["GET"])
 def homepage():
