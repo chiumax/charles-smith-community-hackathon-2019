@@ -1,68 +1,30 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# CRAM Travel
 
-In the project directory, you can run:
+*CRAM Travel stands for Chris, Robert, Albert, and Max. Also, it's what we had to do for this hackathon*
 
-### `npm start`
+We participated in a 7 hour long hackathon and this is what were able to make.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo Media
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Challenge: Something That Would Help Teens With Independent Travel
+We decided to tackle this head-on and attempt to create a "lite" version of a trip planning website. Although we had slightly overestimated our abilities, we knew what went wrong and how it would be fixed the next time around.
 
-### `npm test`
+## What it does
+As of now, we have set up a couple forms and were able to display nearest airports to the customer and to the destination. As for backend, we got directions and hotel locations working.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How we built it
+We used Python Flask to program the backend and React for the frontend.
 
-### `npm run build`
+## Challenges we ran into
+Parsing data. The api we used returned a lot of it and it took some time to look through it. Also got confused with a couple CSS properties after not having touched it in a couple weeks.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Accomplishments that we're proud of
+We are proud that we were able to successfully get the data from the API's and correctly format it. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## What we learned
+NEVER put react and flask together its way too annoying trying to call the flask server that's trying to call the API. Next time, static HTML will do and possibly take a look into Bootstrap?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What's next for The Stock Prophet
+Honestly, not much. But it would be cool to have enough time to set up a summary page that can display all the logistics of a possible vacation trip.
