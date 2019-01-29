@@ -7,6 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 We participated in a 7 hour long hackathon and this is what were able to make.
 
 ## Demo Media
+![image](demoIMG/image1.png)
+![image](demoIMG/image3.png)
+![image](demoIMG/image4.png)
+![image](demoIMG/image5.png)
+![image](demoIMG/image6.gif)
 
 ## Challenge: Something That Would Help Teens With Independent Travel
 We decided to tackle this head-on and attempt to create a "lite" version of a trip planning website. Although we had slightly overestimated our abilities, we knew what went wrong and how it would be fixed the next time around.
