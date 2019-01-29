@@ -12,7 +12,7 @@ We participated in a 7 hour long hackathon and this is what were able to make.
 We decided to tackle this head-on and attempt to create a "lite" version of a trip planning website. Although we had slightly overestimated our abilities, we knew what went wrong and how it would be fixed the next time around.
 
 ## What it does
-As of now, we have set up a couple forms and were able to display nearest airports to the customer and to the destination. As for backend, we got directions and hotel locations working.
+As of now, we have set up a couple forms and were able to display nearest airports to the customer and to the destination. As for backend, we got directions, airport flight logistics, and hotel locations working.
 
 ## How we built it
 We used Python Flask to program the backend and React for the frontend.
@@ -26,5 +26,5 @@ We are proud that we were able to successfully get the data from the API's and c
 ## What we learned
 NEVER put react and flask together its way too annoying trying to call the flask server that's trying to call the API. Next time, static HTML will do and possibly take a look into Bootstrap?
 
-## What's next for The Stock Prophet
+## What's next for CRAM Travel
 Honestly, not much. But it would be cool to have enough time to set up a summary page that can display all the logistics of a possible vacation trip.
