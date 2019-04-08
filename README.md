@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 *CRAM Travel stands for Chris, Robert, Albert, and Max. Also, it's what we had to do for this hackathon*
 
-We participated in a 7 hour long hackathon and this is what were able to make.
+We participated in a 10 hour long hackathon and this is what were able to make.
 
 ## Demo Media
 ![image](demoIMG/image1.png)
